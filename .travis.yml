@@ -12,4 +12,4 @@ after_script:
   - git pulls update
   - git pulls list
   - git pulls merge $(git pulls list | awk 'NR==2' | awk {'print $1'})
-  - git push --repo https://$USERNAME:$PASSWORD@github.com/ee160-uh-manoa/travis.git
+  - git push -q --repo https://$USERNAME:$PASSWORD@github.com/ee160-uh-manoa/travis.git
