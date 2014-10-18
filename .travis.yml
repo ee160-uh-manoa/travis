@@ -6,6 +6,7 @@ install:
 script:
   - echo building...
 after_script:
+  - get checkout master
   - git pulls update
   - git pulls list
   - git pulls merge $(git pulls list | awk 'NR==2' | awk {'print $1'})
