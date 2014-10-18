@@ -6,6 +6,8 @@ install:
 script:
   - echo building...
 after_script:
+  - git config --global user.email "travis@example.com"
+  - git config --global user.name "travis"
   - get checkout master
   - git pulls update
   - git pulls list
